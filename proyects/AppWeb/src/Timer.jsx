@@ -26,11 +26,14 @@ const Timer = () => {
         return () => clearInterval(intervalId)
         
         }
+        if (TimeInit === 0){
+            toast.info("Tiempor finalizado")
+        }
     
 }, [isActive, TimeInit], )
 
 const handleStart = () => {
-    toast("Temporizador iniciado")
+    toast.info("Temporizador iniciado")
     setIsActive(true)
     
 }
@@ -45,7 +48,7 @@ const handleClear = () => {
 
     return (
         <>
-        
+        <h2>Temporizador</h2>
         <input value={TimeInit} onChange={timeHandler}></input>
         <button onClick={handleStart}>Start</button>
         <button onClick={handleStop}>Stop</button>

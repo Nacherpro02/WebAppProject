@@ -14,6 +14,8 @@ const [inputSent, setInputSent] = useState('')
     setInputSent(input)
   }
 
+
+  
   return (
     <>
     <p>Escribe texto</p>
