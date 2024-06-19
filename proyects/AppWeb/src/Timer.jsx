@@ -1,4 +1,9 @@
 import { useState, useEffect} from 'react'
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 const Timer = () => {
     const [TimeReset, setTimeReset] = useState()
@@ -22,9 +27,13 @@ const Timer = () => {
         
         }
     
-}, [isActive, TimeInit])
+}, [isActive, TimeInit], )
 
-const handleStart = () => setIsActive(true)
+const handleStart = () => {
+    toast("Temporizador iniciado")
+    setIsActive(true)
+    
+}
 const handleStop = () => setIsActive(false)
 const handleReset = () => {
     setTimeInit(TimeReset)
@@ -43,13 +52,11 @@ const handleClear = () => {
         <button onClick={handleReset}>Reset</button>
         <button onClick={handleClear}>Clear</button>
         <p>Contador: {TimeInit}s</p>
+        <ToastContainer ></ToastContainer>
 
         
         
-        
-        
-        
-        
+
         </>
 
     )
