@@ -19,7 +19,13 @@
 # Clone the repository
 git clone https://github.com/Nacherpro02/WebAppProject.git
 
-# Go to the proyects directory
+# Go to the main directory
+cd WebAppProject
+
+# Go to the proyect directory
+cd proyects
+
+# Go to the WebApp directory
 cd AppWeb
 
 # Install dependencies
